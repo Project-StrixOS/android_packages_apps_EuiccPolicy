@@ -20,12 +20,16 @@ android_app {
     required: [
         "hidden-api-whitelist-org.lineageos.euicc.xml",
     ],
+
+    aaptflags: [
+        "--rename-manifest-package", "org.strixos.euicc",
+    ],
 }
 
 prebuilt_etc {
     name: "hidden-api-whitelist-org.lineageos.euicc.xml",
     relative_install_path: "sysconfig",
-    filename: "hidden-api-whitelist-org.lineageos.euicc.xml",
+    filename: "hidden-api-whitelist-org.strixos.euicc.xml",
     src: "hidden-api-whitelist-org.lineageos.euicc.xml",
     product_specific: true,
 }
